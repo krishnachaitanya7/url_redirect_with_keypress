@@ -5,6 +5,6 @@ therefore i developed this small javascript which can be loaded as tampermonkey 
 # USAGE
 usage is very simple. all you need to do is just press keys :P .
 this code only works for the website URL's ending with a number. i mainly considered this website during developing this script
-if URL is http://wallpaperswide.com/celebrities-desktop-wallpapers/page/10 and want to convert to http://wallpaperswide.com/celebrities-desktop-wallpapers/page/9 press left arrow key.
-if URL is http://wallpaperswide.com/celebrities-desktop-wallpapers/page/10 and want to convert to http://wallpaperswide.com/celebrities-desktop-wallpapers/page/11 press right arrow key.
+if URL is http://wallpaperswide.com/celebrities-desktop-wallpapers/page/10 and you want to convert it to http://wallpaperswide.com/celebrities-desktop-wallpapers/page/9 just press left arrow key.
+if URL is http://wallpaperswide.com/celebrities-desktop-wallpapers/page/10 and you want to convert it to http://wallpaperswide.com/celebrities-desktop-wallpapers/page/11 just press right arrow key.
 # Love and Support open source
