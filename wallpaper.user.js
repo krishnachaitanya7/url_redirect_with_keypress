@@ -16,9 +16,11 @@ function do_next_activity(){
 q = window.location.href;
 
 if ( next_page_number() <= 10){q = q.substring(0, q.length - 1);}
-    else{
+    if ( next_page_number() >= 10 &&  next_page_number() <= 100 ){
         q = q.substring(0, q.length - 2);
-    }
+    } else{
+        q = q.substring(0, q.length - 3);
+       }      
 final_url = q.concat(next_page_number());
 window.open(final_url,"_self");
 }
@@ -33,9 +35,11 @@ return lastitem;}
 function do_previous_activity(){
 q = window.location.href;
 if ( parseInt(previous_page_number()) <= 10){q = q.substring(0, q.length - 1);}
-    else{
-        q = q.substring(0, q.length - 2); 
-    }
+    if ( next_page_number() >= 10 &&  next_page_number() <= 100 ){
+        q = q.substring(0, q.length - 2);
+    } else{
+        q = q.substring(0, q.length - 3);
+    } 
 final_url = q.concat(previous_page_number());
 window.open(final_url,"_self");
 }
