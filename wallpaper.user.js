@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         wallpaper_finder
 // @namespace    http://your.homepage/
-// @version      0.1
+// @version      1.0
+// @description Website Navigator With Arrow Key Press
 // @match      http://wallpaperswide.com/*
 // ==/UserScript==
 function next_page_number(){
