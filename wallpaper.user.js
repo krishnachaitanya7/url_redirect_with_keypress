@@ -1,72 +1,48 @@
 // ==UserScript==
-// @name         wallpaper_finder
+// @name         hub_navigator
 // @namespace    http://your.homepage/
 // @version      1.0
 // @description Website Navigator With Arrow Key Press
-// @match      http://wallpaperswide.com/*
+// @match      https://*.*/*
 // ==/UserScript==
-function next_page_number(){
-k = window.location.href;
-var urlarray = k.split('/');
-var lastitem = urlarray.pop();
-number = parseInt(lastitem);
-number += 1;
-lastitem = number.toString();
-return lastitem;}
-function do_next_activity(){
-q = window.location.href;
-if ( next_page_number() != "NaN"){
-if ( next_page_number() <= 10){q = q.substring(0, q.length - 1);}
-    else if ( next_page_number() > 10 &&  next_page_number() <= 100 ){
-        q = q.substring(0, q.length - 2);
-    } else{
-        q = q.substring(0, q.length - 3);
-       } final_url = q.concat(next_page_number()); } else{
-           q = q.substring(0, q.length - 5);
-           final_url = q.concat("/page/2");
-       }
+function updatePageNumber(increment) {
+    const url = window.location.href;
 
-window.open(final_url,"_self");
-}
-function previous_page_number() {
-k = window.location.href;
-var urlarray = k.split('/');
-var lastitem = urlarray.pop();
-number = parseInt(lastitem);
-number -= 1;
-lastitem = number.toString();
-return lastitem; }
+    // Use regex to find the last numeric sequence in the URL
+    const regex = /(\d+)(?!.*\d)/;
+    const match = url.match(regex);
 
-function present_page_number() {
-k = window.location.href;
-var urlarray = k.split('/');
-var lastitem = urlarray.pop();
-number = parseInt(lastitem);
-lastitem = number.toString();
-return lastitem; }
+    if (match) {
+        // Extract the matched number
+        let number = parseInt(match[0]);
 
+        // Adjust the number based on the increment (positive for next, negative for previous)
+        number += increment;
 
-function do_previous_activity(){
-    if ( previous_page_number() != "NaN"){
-q = window.location.href;   
-if ( parseInt(present_page_number()) <= 9){q = q.substring(0, q.length - 1);}
-   else if ( present_page_number() >= 10 &&  present_page_number() <= 99 ){
-        q = q.substring(0, q.length - 2);
+        // Replace the old number in the URL with the updated number
+        const updatedUrl = url.replace(regex, number.toString());
+
+        // Log the updated URL to the console
+        console.log('Updated URL:', updatedUrl);
+
+        // Navigate to the updated URL
+        window.open(updatedUrl, "_self");
     } else {
-        q = q.substring(0, q.length - 3);
-    } 
-final_url = q.concat(previous_page_number());
-window.open(final_url,"_self");
+        console.log("No number found in the URL to increment/decrement.");
     }
 }
 
-window.addEventListener("keydown", checkKeyPressed, false);
- 
 function checkKeyPressed(e) {
-    if (e.keyCode == "39") {       
-       do_next_activity();
+    // Right arrow key for increment
+    if (e.keyCode === 39) {
+        updatePageNumber(1); // Increment page number
     }
-    if (e.keyCode == "37") {        
-       do_previous_activity();
+    // Left arrow key for decrement
+    if (e.keyCode === 37) {
+        updatePageNumber(-1); // Decrement page number
     }
 }
+
+// Listen for keydown events
+window.addEventListener("keydown", checkKeyPressed, false);
+
