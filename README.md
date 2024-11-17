@@ -17,6 +17,6 @@ I have added a feature to stop opening whatsapp web while you are working. Simpl
 stop_opening_whatsapp_web.js
 ```
 
-In your tampermonkey extension. It will stop opening whatsapp web while you are working. It will show a blank messgae page. You can deactivate it by deactivating the script in tampermonkey extension.
+In your tampermonkey extension. It will stop opening whatsapp web while you are working. It will show a blank message page. You can deactivate it by deactivating the script in tampermonkey extension.
 
 ## Love and Support open source
