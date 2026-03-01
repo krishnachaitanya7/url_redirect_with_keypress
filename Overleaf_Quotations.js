@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Overleaf Quote Buttons (New Editor)
 // @namespace    http://tampermonkey.net/
-// @version      9.4
+// @version      9.5
 // @description  Add single and double curly quote buttons to Overleaf new editor (CM6)
 // @match        https://www.overleaf.com/*
 // @run-at       document-idle
