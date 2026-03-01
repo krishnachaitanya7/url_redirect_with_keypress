@@ -71,7 +71,7 @@
 
     addButton(
       "single-quote-btn",
-      "\u2018...\u2019", // '...'
+      "'...'", // '...'
       "Wrap in single quotes",
       "\u2018", // '
       "\u2019", // '
@@ -80,7 +80,7 @@
 
     addButton(
       "double-quote-btn",
-      "\u201C...\u201D", // "..."
+      '"..."', // "..."
       "Wrap in double quotes",
       "\u201C", // "
       "\u201D", // "
