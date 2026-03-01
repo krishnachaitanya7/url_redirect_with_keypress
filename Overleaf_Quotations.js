@@ -6,8 +6,8 @@
 // @match        https://www.overleaf.com/*
 // @run-at       document-idle
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/krishnachaitanya7/url_redirect_with_keypress/refs/heads/master/Overleaf%2520Quotations.js
-// @downloadURL  https://raw.githubusercontent.com/krishnachaitanya7/url_redirect_with_keypress/refs/heads/master/Overleaf%2520Quotations.js
+// @updateURL    https://raw.githubusercontent.com/krishnachaitanya7/url_redirect_with_keypress/refs/heads/master/Overleaf_Quotations.js
+// @downloadURL  https://raw.githubusercontent.com/krishnachaitanya7/url_redirect_with_keypress/refs/heads/master/Overleaf_Quotations.js
 // ==/UserScript==
 
 (function () {
