@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Overleaf Quote Buttons (New Editor)
 // @namespace    http://tampermonkey.net/
-// @version      9.5
+// @version      9.6
 // @description  Add single and double curly quote buttons to Overleaf new editor (CM6)
 // @match        https://www.overleaf.com/*
 // @run-at       document-idle
@@ -54,7 +54,7 @@
     btn.type = "button";
     btn.className = "ol-cm-toolbar-button";
     btn.style.cssText =
-      "font-family: monospace; font-size: 13px; font-weight: bold; min-width: 32px;";
+      'font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 13px; font-weight: bold; min-width: 32px;';
 
     btn.addEventListener("mousedown", (e) => {
       e.preventDefault();
